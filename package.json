@@ -4,7 +4,8 @@
   "description": "Expose Sudden Motion Sensor data as a streaming socket.io service",
   "main": "lib/index.js",
   "scripts": {
-    "compile": "coffee -m -o lib -c src"
+    "compile": "coffee -m -o lib -c src",
+    "live": "npm run compile && node lib/index.js"
   },
   "keywords": [
     "smslib",
@@ -14,5 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "coffee-script": "^1.9.2"
+  },
+  "dependencies": {
+    "linebyline": "0.0.8",
+    "socket.io": "^1.3.5"
   }
 }
