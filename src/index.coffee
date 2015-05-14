@@ -12,7 +12,7 @@ io.on 'connect', (socket) ->
 
 server.listen port
 
-feeder = spawn 'smsutil', ['-a', 'txyz']
+feeder = spawn '~/bin/smsutil', ['-a', 'txyz']
 
 readline.createInterface
   input: feeder.stdout,
