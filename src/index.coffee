@@ -2,7 +2,6 @@ server          = require('http').createServer()
 readline        = require 'readline'
 io              = require('socket.io')(server)
 { spawn }       = require 'child_process'
-proc            = child_process.spawn()
 
 port = 9090
 
