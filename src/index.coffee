@@ -12,12 +12,11 @@ io.on 'connect', (socket) ->
 
 server.listen port
 
-feeder = spawn '~/bin/smsutil', ['-a', 'txyz']
-
 readline.createInterface
-  input: feeder.stdout,
+  input: process.stdin,
   terminal: false
 .on 'line', (line) ->
+  console.info 'Emitting', line
   io.emit 'sample', line
 
 console.info "Listening on port #{port}"
